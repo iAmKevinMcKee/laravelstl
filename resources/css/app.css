@@ -1,0 +1,15 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+@import "partials/buttons.css";
+@import "partials/forms.css";
+
+@import "tailwindcss/utilities";
+
+[v-cloak] {
+  @apply .hidden;
+}
+
+.transition {
+  transition: all .3s ease-in-out;
+}

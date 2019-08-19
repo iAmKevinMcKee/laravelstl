@@ -17,4 +17,7 @@
     <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 @yield('content')
+
+@yield('javascript')
+
 </html>
