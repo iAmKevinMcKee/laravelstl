@@ -14,7 +14,7 @@
                 @livewire('create-event')
             @endauth
 
-            @livewire('events-list', $events)
+{{--            @livewire('events-list', $events)--}}
 {{--            <table class="w-full mt-6 bg-white shadow-xl rounded-lg">--}}
 {{--                <thead class="text-lg">--}}
 {{--                <th class="pt-3">Date</th>--}}
