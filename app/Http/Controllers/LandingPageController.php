@@ -14,8 +14,8 @@ class LandingPageController extends Controller
             ->with(compact('events'));
     }
 
-    public function comingSoon()
+    public function landing()
     {
-        return view('coming_soon');
+        return view('landing_tailwind');
     }
 }
