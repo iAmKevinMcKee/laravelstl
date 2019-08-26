@@ -38,15 +38,23 @@
 
     <section class="bg-white py-24">
         <div class="container mx-auto">
-            <input type="text" class="w-full border-2 text-gray-800 text-center" placeholder="Find a topic or add a new one">
-            <div class="w-full bg-blue-200 border-t-4 border-teal-400 mt-8">
-                <div class="text-gray-800 w-full flex flex-wrap">
-                    <div class="w-1/12 text-center">
-                        <div>Up</div>
-                        <div>9</div>
-                        <div>Down</div>
+            <input type="text" class="w-full border-2 text-gray-800 text-center form-input" placeholder="Find a topic or add a new one">
+            <div class="w-full border-t-8 border-gray-400 mt-8">
+                <div class="text-gray-800 w-full flex flex-wrap border-b-2 border-gray-200 py-4">
+                    <div class="w-1/12 text-center text-2xl">
+                        <div><i class="fas fa-arrow-circle-up cursor-pointer"></i></div>
+                        <div class="text-4xl">9</div>
+                        <div><i class="fas fa-arrow-circle-down cursor-pointer"></i></div>
                     </div>
-                    <div class="w-11/12 flex items-center">Name</div>
+                    <div class="w-11/12 flex items-center text-4xl">Laravel Vapor and Deploying Serverless Applications</div>
+                </div>
+                <div class="text-gray-800 w-full flex flex-wrap border-b-2 border-gray-200 py-4">
+                    <div class="w-1/12 text-center text-2xl">
+                        <div><i class="fas fa-arrow-circle-up cursor-pointer"></i></div>
+                        <div class="text-4xl">9</div>
+                        <div><i class="fas fa-arrow-circle-down cursor-pointer"></i></div>
+                    </div>
+                    <div class="w-11/12 flex items-center text-4xl">Laravel Vapor and Deploying Serverless Applications</div>
                 </div>
             </div>
         </div>

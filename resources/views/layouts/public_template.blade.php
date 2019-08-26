@@ -12,9 +12,7 @@
     <meta name="author" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <!-- Font Awesome if you need it
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-    -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <!--Replace with your tailwind.css once created-->
 
