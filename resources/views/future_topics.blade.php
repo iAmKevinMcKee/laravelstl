@@ -4,8 +4,6 @@
 
 @section('content')
 
-
-
     <!--Hero-->
     <div class="pt-32 z-50">
 
@@ -36,25 +34,44 @@
         </svg>
     </div>
 
+    <section class="bg-white pt-24">
+        <div class="container mx-auto px-6">
+            <div class="w-full bg-red-100 border-2 border-red-800 text-center">
+                <div class="w-full text-4xl text-stl-red pt-16 px-4 leading-tight">This page will be functional after our first meetup on September 16th, 2019.</div>
+                <div class="w-full text-4xl text-stl-red py-8 px-4 leading-tight">We will use <a href="https://livewire-framework.com/" class="hover:underline text-blue-800" target="_blank">Livewire</a> to create an interactive UI without writing any Javascript.</div>
+                <div class="pb-8 pt-2">
+                    <a href="{{route('meetup-redirect')}}" target="_blank">
+                        <button class="mx-auto text-4xl lg:mx-0 hover:bg-blue-800 hover:text-gray-200 focus:outline-none bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg">RSVP to Our Meetup!</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="bg-white py-24">
-        <div class="container mx-auto">
-            <input type="text" class="w-full border-2 text-gray-800 text-center form-input" placeholder="Find a topic or add a new one">
-            <div class="w-full border-t-8 border-gray-400 mt-8">
-                <div class="text-gray-800 w-full flex flex-wrap border-b-2 border-gray-200 py-4">
+        <div class="container mx-auto px-6">
+            <div class="w-full flex">
+                <input type="text" class="w-full border-2 text-blue-800 text-center
+                px-4 py-3 text-xl w-full md:w-5/6 bg-gray-100 border-r-0 rounded-r-none rounded-l-full
+                focus:border-blue-800 focus:bg-white focus:outline-none" placeholder="Find a topic or add a new one">
+                <button class="w-full md:w-1/6 bg-stl-red hover:opacity-75 rounded-r-full focus:outline-none">Add New Topic</button>
+            </div>
+            <div class="w-full border-t-8 border-gray-400 mt-8 text-gray-800">
+                <div class="w-full flex flex-wrap border-b-2 border-gray-200 py-4">
                     <div class="w-1/12 text-center text-2xl">
-                        <div><i class="fas fa-arrow-circle-up cursor-pointer"></i></div>
-                        <div class="text-4xl">9</div>
-                        <div><i class="fas fa-arrow-circle-down cursor-pointer"></i></div>
+                        <div><i class="fas fa-arrow-circle-up cursor-pointer text-blue-800"></i></div>
+                        <div class="text-4xl">43</div>
+                        <div><i class="fas fa-arrow-circle-down cursor-pointer text-stl-red"></i></div>
                     </div>
                     <div class="w-11/12 flex items-center text-4xl">Laravel Vapor and Deploying Serverless Applications</div>
                 </div>
-                <div class="text-gray-800 w-full flex flex-wrap border-b-2 border-gray-200 py-4">
+                <div class="w-full flex flex-wrap border-b-2 border-gray-200 py-4">
                     <div class="w-1/12 text-center text-2xl">
-                        <div><i class="fas fa-arrow-circle-up cursor-pointer"></i></div>
-                        <div class="text-4xl">9</div>
-                        <div><i class="fas fa-arrow-circle-down cursor-pointer"></i></div>
+                        <div><i class="fas fa-arrow-circle-up cursor-pointer text-blue-800"></i></div>
+                        <div class="text-4xl">22</div>
+                        <div><i class="fas fa-arrow-circle-down cursor-pointer text-stl-red"></i></div>
                     </div>
-                    <div class="w-11/12 flex items-center text-4xl">Laravel Vapor and Deploying Serverless Applications</div>
+                    <div class="w-11/12 flex items-center text-4xl">Integrating Tailwind CSS with Laravel</div>
                 </div>
             </div>
         </div>
