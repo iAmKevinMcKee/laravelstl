@@ -11,7 +11,7 @@
             <h3 class="text-center text-4xl text-gray-800 mt-10">Meetups</h3>
 
             @auth
-                @livewire('create-event')
+{{--                @livewire('create-event')--}}
             @endauth
 
 {{--            @livewire('events-list', $events)--}}
@@ -50,6 +50,6 @@
 
 @section('javascript')
 
-    @livewireAssets
+{{--    @livewireAssets--}}
 
 @endsection
