@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5095fe6e-efb8-4f55-b275-75e17efec1a7" name="Default Changelist" comment="">
+    <list default="true" id="5095fe6e-efb8-4f55-b275-75e17efec1a7" name="Default Changelist" comment="cleanup">
+      <change afterPath="$PROJECT_DIR$/resources/views/landing_tailwind_template.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/laravelstl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravelstl.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/future_topics.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/future_topics.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/landing.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/landing.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/landing_tailwind.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/landing_tailwind.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/public_template.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/public_template.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +116,6 @@
       <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
-      <path value="$PROJECT_DIR$/vendor/calebporzio/livewire" />
     </include_path>
   </component>
   <component name="ProjectId" id="1PUTjf5Or5cSJyjY4KpucHhA0ox" />
@@ -160,6 +163,7 @@
       <workItem from="1566617076784" duration="85000" />
       <workItem from="1566617655245" duration="5000" />
       <workItem from="1566618213024" duration="10363000" />
+      <workItem from="1566873698210" duration="783000" />
     </task>
     <task id="LOCAL-00001" summary="wip">
       <created>1564754221486</created>

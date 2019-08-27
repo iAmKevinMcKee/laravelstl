@@ -61,7 +61,7 @@
                     <div class="w-1/12 text-center text-2xl">
                         <div><i class="fas fa-arrow-circle-up cursor-pointer text-blue-800"></i></div>
                         <div class="text-4xl">43</div>
-                        <div><i class="fas fa-arrow-circle-down cursor-pointer text-stl-red"></i></div>
+                        <div><i class="fas fa-arrow-circle-down cursor-pointer text-blue-800"></i></div>
                     </div>
                     <div class="w-11/12 flex items-center text-4xl">Laravel Vapor and Deploying Serverless Applications</div>
                 </div>
@@ -69,7 +69,7 @@
                     <div class="w-1/12 text-center text-2xl">
                         <div><i class="fas fa-arrow-circle-up cursor-pointer text-blue-800"></i></div>
                         <div class="text-4xl">22</div>
-                        <div><i class="fas fa-arrow-circle-down cursor-pointer text-stl-red"></i></div>
+                        <div><i class="fas fa-arrow-circle-down cursor-pointer text-blue-800"></i></div>
                     </div>
                     <div class="w-11/12 flex items-center text-4xl">Integrating Tailwind CSS with Laravel</div>
                 </div>
