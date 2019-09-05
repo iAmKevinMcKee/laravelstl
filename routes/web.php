@@ -9,3 +9,7 @@ Route::get('/future-topics', [\App\Http\Controllers\FutureTopicsController::clas
 
 Route::get('/dashboard', 'DashboardController@index')->middleware('auth');
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/test', function () {
+    return view('nothere');
+});
