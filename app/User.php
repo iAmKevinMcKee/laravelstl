@@ -37,8 +37,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function future_topics()
+    public function event_votes()
     {
-        return $this->hasMany(FutureTopic::class);
+        return $this->hasMany(EventVote::class);
     }
 }
