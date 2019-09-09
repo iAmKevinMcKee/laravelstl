@@ -39,9 +39,9 @@
 {{--            Add Livewire Component Here--}}
 {{--            Show All Events--}}
 {{--            Add Event--}}
+{{--            Success Message (new component)--}}
 {{--            Search For Event--}}
 {{--            Filter Event List--}}
-{{--            Show Totals By Category--}}
         </div>
     </section>
 
