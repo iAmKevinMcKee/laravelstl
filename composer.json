@@ -9,7 +9,6 @@
     "license": "MIT",
     "require": {
         "php": "^7.2.2",
-        "calebporzio/livewire": "^0.3.3",
         "facade/ignition": "^1.4",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.0",

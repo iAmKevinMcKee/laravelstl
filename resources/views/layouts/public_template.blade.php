@@ -62,7 +62,7 @@
         <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
             <ul class="list-reset lg:flex justify-end flex-1 items-center">
                 <li class="lg:mr-3 mb-6 lg:mb-0">
-                    <a class="inline-block py-2 px-4 text-gray-200 font-bold nav-links {{request()->segment(1) == 'future-topics' ? 'underline' : 'no-underline'}}" href="{{route('future-topics.index')}}">Future Topics</a>
+                    <a class="inline-block py-2 px-4 text-gray-200 font-bold nav-links {{request()->segment(1) == 'events' ? 'underline' : 'no-underline'}}" href="{{route('events.index')}}">Events</a>
                 </li>
                 <li class="lg:mr-3 mb-6 lg:mb-0">
                     <a class="inline-block py-2 px-4 text-gray-200 font-bold no-underline nav-links" href="{{route('slack-redirect')}}" target="_blank">Slack Channel</a>

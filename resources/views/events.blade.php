@@ -1,6 +1,6 @@
 @extends('layouts/public_template')
 
-@section('title', 'Home')
+@section('title', 'Events')
 
 @section('content')
 
@@ -9,11 +9,11 @@
 
         <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
 
-            <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-200">Future Topics</h1>
+            <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-200">Events</h1>
             <div class="w-full mb-4">
                 <div class="h-1 mx-auto gradient-light w-64 opacity-50 my-0 py-0 rounded-t"></div>
             </div>
-            <h4 class="w-full pt-6 pb-6 text-center text-xl">Let us know if there's something you want to learn about in a future meetup. Add a new topic or vote for an existing one.</h4>
+            <h4 class="w-full pt-6 pb-6 text-center text-xl">Review past events, check out upcoming talks, and/or suggest and vote for future topics.</h4>
 
         </div>
 
@@ -34,26 +34,15 @@
         </svg>
     </div>
 
-    <section class="bg-white pt-24">
-        <div class="container mx-auto px-6">
-            <div class="w-full bg-red-100 border-2 border-red-800 text-center">
-                <div class="w-full text-4xl text-stl-red pt-16 px-4 leading-tight">This page will be functional after our first meetup on September 16th, 2019.</div>
-                <div class="w-full text-4xl text-stl-red py-8 px-4 leading-tight">We will use <a href="https://livewire-framework.com/" class="hover:underline text-blue-800" target="_blank">Livewire</a> to create an interactive UI without writing any Javascript.</div>
-                <div class="pb-8 pt-2">
-                    <a href="{{route('meetup-redirect')}}" target="_blank">
-                        <button class="mx-auto text-4xl lg:mx-0 hover:bg-blue-800 hover:text-gray-200 focus:outline-none bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg">RSVP to Our Meetup!</button>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section class="bg-white py-24">
         <div class="container mx-auto px-6">
-            @livewire('events')
+{{--            Add Livewire Component Here--}}
+{{--            Show All Events--}}
+{{--            Add Event--}}
+{{--            Search For Event--}}
+{{--            Filter Event List--}}
+{{--            Show Totals By Category--}}
         </div>
     </section>
-
-    @livewireAssets
 
 @endsection
