@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5095fe6e-efb8-4f55-b275-75e17efec1a7" name="Default Changelist" comment="">
+    <list default="true" id="5095fe6e-efb8-4f55-b275-75e17efec1a7" name="Default Changelist" comment="wip">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/events.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/events.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire_copy_paste.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire_copy_paste.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="lw-last-test" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
