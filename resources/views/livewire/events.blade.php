@@ -7,7 +7,7 @@
                 focus:border-blue-800 focus:bg-white focus:outline-none" placeholder="Find a topic or add a new one">
                 <button wire:click="addTopic" class="w-full md:w-1/6 bg-stl-red hover:opacity-75 rounded-r-full focus:outline-none">Add New Topic</button>
             @else
-                <input type="text" class="w-full border-2 text-blue-800 text-center
+                <input wire:model.debounce.1ms="topic" type="text" class="w-full border-2 text-blue-800 text-center
                 px-4 py-3 text-xl bg-gray-100 rounded-full
                 focus:border-blue-800 focus:bg-white focus:outline-none" placeholder="Search for an Event or Topic">
             @endauth
