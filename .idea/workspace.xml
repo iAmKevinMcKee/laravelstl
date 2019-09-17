@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5095fe6e-efb8-4f55-b275-75e17efec1a7" name="Default Changelist" comment="wip">
+    <list default="true" id="5095fe6e-efb8-4f55-b275-75e17efec1a7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Events.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/SuccessMessage.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/events.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/success-message.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/events.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/events.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire_copy_paste.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire_copy_paste.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -218,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567975402844</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="wip">
+      <created>1568677736414</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1568677736414</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
