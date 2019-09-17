@@ -34,10 +34,18 @@
                         <div class="text-4xl">{{$event->score}}</div>
                         <div><i class="fas fa-arrow-circle-down cursor-pointer text-blue-800 hover:text-blue-600"></i></div>
                     </div>
-                    <div class="w-11/12 flex items-center text-4xl flex-col justify-center">
-                        <div class="w-full flex align-center">{{$event->topic}} @if($event->video_url)<a href="{{$event->video_url}}" target="_blank" class="hover:text-blue-600 text-blue-800"><i class="fab fa-youtube ml-4"></i><span class="text-sm ml-1">Watch Video</span></a>@endif</div>
+                    <div class="w-9/12 flex items-center text-4xl flex-col justify-center">
+                        <div class="w-full flex align-center">{{$event->topic}}</div>
                         @if($event->scheduled || $event->completed)<div class="w-full text-xl text-stl-red">{{optional($event->date)->toFormattedDateString()}} - {{$event->speaker}}</div>@endif
                     </div>
+                    @if($event->video_url)
+                    <div class="w-1/6 flex justify-center align-content-center">
+                        <a href="{{$event->video_url}}" target="_blank" class="hover:text-blue-600 text-blue-800 flex flex-col justify-center">
+                            <i class="fab fa-youtube self-center text-5xl"></i>
+                            <span class="text-sm self-center text-lg">Watch Video</span>
+                        </a>
+                    </div>
+                    @endif
                 </div>
             @endforeach
         </div>
