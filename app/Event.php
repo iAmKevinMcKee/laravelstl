@@ -14,18 +14,25 @@ class Event extends Model
         return $this->hasMany(EventVote::class);
     }
 
-    public function getScheduledAttribute() {
+    public function getScheduledAttribute()
+    {
         if ($this->date) {
             return true;
         }
         return false;
     }
 
-    public function getCompletedAttribute() {
-        if(!is_null($this->date) && $this->date < now()->startOfDay()) {
+    public function getCompletedAttribute()
+    {
+        if (!is_null($this->date) && $this->date < now()->startOfDay()) {
             return true;
         }
         return false;
+    }
+
+    public function getVotesAttribute()
+    {
+        return $this->load('event_votes')->event_votes->sum('value');
     }
 
     public function scopeCompleted($query)
