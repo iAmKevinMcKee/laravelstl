@@ -7,54 +7,58 @@ use Livewire\Component;
 class Event extends Component
 {
     public $score = null;
+    public $userVote = null;
     protected $event = null;
 
     public function mount($event)
     {
         $this->event = $event;
         $this->score = $this->event->event_votes->sum('value');
+        $this->userVote = $this->currentUserVote();;
     }
 
     public function render()
     {
-        return view('livewire.event');
+        return view('livewire.event', [
+            'userVote' => $this->userVote
+        ]);
+    }
+
+    private function refreshEvent()
+    {
+        $this->event = $this->event->fresh(['event_votes']);
+        $this->score = $this->event->event_votes->sum('value');
+        $this->userVote = $this->currentUserVote();
     }
 
     public function vote($value)
     {
-        //checkfor existing vote
         $existing = $this->event->event_votes->where('user_id', auth()->user()->id)->first();
         if (isset($existing) && $existing->value === $value) {
-            return $this->deleteExisting($existing, $value);
+            $existing->delete();
         }
 
-        //if existing and different value
         if (isset($existing) && $existing->value != $value) {
             $existing->value = $value;
             $existing->save();
-            $this->score = \App\Event::with('event_votes')->where('id', $this->event->id)->first()->event_votes->sum('value');
-            return;
         }
 
-        //add new vote
         if (empty($existing)) {
             $this->event->event_votes()->create([
                 'user_id' => auth()->user()->id,
                 'value' => $value,
             ]);
-            $this->score = \App\Event::with('event_votes')->where('id', $this->event->id)->first()->event_votes->sum('value');
-            return;
         }
+        $this->refreshEvent();
     }
 
-    protected function existingVote()
+    protected function currentUserVote()
     {
-        return $this->event->event_votes->where('user_id', auth()->user()->id)->first();
-    }
+        $vote = $this->event->event_votes->where('user_id', auth()->user()->id);
 
-    protected function deleteExisting($existing)
-    {
-        $existing->delete();
-        $this->score = \App\Event::with('event_votes')->where('id', $this->event->id)->first()->event_votes->sum('value');
+        if ($vote->count() === 0) {
+            return null;
+        }
+        return $this->event->event_votes->where('user_id', auth()->user()->id)->first()->value;
     }
 }

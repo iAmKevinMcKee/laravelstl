@@ -29,13 +29,13 @@ class EventVotesTest extends TestCase
         ]);
 
         $this->assertCount(1, EventVote::all());
-        $this->assertEquals(1, $event->votes);
+        $this->assertEquals(1, $event->event_votes->sum('value'));
     }
 
     /**
      * @test
      */
-    public function the_event_score_is_the_sum_of_its_votes()
+    public function the_event_score_is_the_sum_of_its_votes_values()
     {
         $this->withoutExceptionHandling();
 
@@ -55,7 +55,7 @@ class EventVotesTest extends TestCase
         ]);
 
         $this->assertCount(2, EventVote::all());
-        $this->assertEquals(2, $event->votes);
+        $this->assertEquals(2, $event->event_votes->sum('value'));
     }
 
     /**
@@ -76,6 +76,6 @@ class EventVotesTest extends TestCase
 
         $this->assertCount(1, EventVote::all());
 
-        $this->assertEquals(-1, $event->votes);
+        $this->assertEquals(-1, $event->event_votes->sum('value'));
     }
 }
