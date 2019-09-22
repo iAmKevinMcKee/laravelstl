@@ -30,11 +30,6 @@ class Event extends Model
         return false;
     }
 
-    public function getVotesAttribute()
-    {
-        return $this->load('event_votes')->event_votes->sum('value');
-    }
-
     public function scopeCompleted($query)
     {
         return $query->whereDate('date', '<', now()->startOfDay());

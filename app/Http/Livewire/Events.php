@@ -17,7 +17,7 @@ class Events extends Component
 
     public function mount()
     {
-        $this->allEvents = Event::all();
+        $this->allEvents = Event::with('event_votes')->get();
     }
 
     public function render()
@@ -54,30 +54,30 @@ class Events extends Component
     private function mapEvents()
     {
         $this->events = $this->allEvents;
-        if($this->topic) {
+        if ($this->topic) {
             $this->events = $this->events->filter(function ($event) {
-                if(stristr($event->topic, $this->topic)) {
+                if (stristr($event->topic, $this->topic)) {
                     return $event;
                 }
             });
         }
-        if($this->hideUnscheduled) {
+        if ($this->hideUnscheduled) {
             $this->events = $this->events->filter(function ($event) {
-                if($event->scheduled) {
+                if ($event->scheduled) {
                     return $event;
                 }
             });
         }
-        if($this->hideScheduled) {
+        if ($this->hideScheduled) {
             $this->events = $this->events->filter(function ($event) {
-                if(!$event->scheduled || $event->completed) {
+                if (!$event->scheduled || $event->completed) {
                     return $event;
                 }
             });
         }
-        if($this->hideCompleted) {
+        if ($this->hideCompleted) {
             $this->events = $this->events->filter(function ($event) {
-                if(!$event->completed) {
+                if (!$event->completed) {
                     return $event;
                 }
             });
