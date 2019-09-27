@@ -14,7 +14,9 @@ class Event extends Component
     {
         $this->event = $event;
         $this->score = $this->event->event_votes->sum('value');
-        $this->userVote = $this->currentUserVote();;
+        if (auth()->check()) {
+            $this->userVote = $this->currentUserVote();
+        }
     }
 
     public function render()
@@ -33,6 +35,10 @@ class Event extends Component
 
     public function vote($value)
     {
+        if (!auth()->check()) {
+            return  $this->redirect('/register');
+        }
+
         $existing = $this->event->event_votes->where('user_id', auth()->user()->id)->first();
         if (isset($existing) && $existing->value === $value) {
             $existing->delete();
