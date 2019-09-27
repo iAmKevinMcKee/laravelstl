@@ -18,9 +18,9 @@
         </div>
         @endif
         <div class="w-full flex mt-8">
-            <button class="bg-blue-800 p-2 rounded-lg flex-1 mx-3 focus:outline-none uppercase font-bold hover:bg-blue-600 focus:bg-blue-600" wire:click="$toggle('hideUnscheduled')"><i class="far {{$hideUnscheduled ? 'fa-check-square' : 'fa-square'}} mr-1"></i> Hide Unscheduled Events</button>
-            <button class="bg-blue-800 p-2 rounded-lg flex-1 mx-3 focus:outline-none uppercase font-bold hover:bg-blue-600 focus:bg-blue-600" wire:click="$toggle('hideScheduled')"><i class="far {{$hideScheduled ? 'fa-check-square' : 'fa-square'}} mr-1"></i> Hide Scheduled Events</button>
-            <button class="bg-blue-800 p-2 rounded-lg flex-1 mx-3 focus:outline-none uppercase font-bold hover:bg-blue-600 focus:bg-blue-600" wire:click="$toggle('hideCompleted')"><i class="far {{$hideCompleted ? 'fa-check-square' : 'fa-square'}} mr-1"></i> Hide Completed Events</button>
+            <button class="bg-blue-800 p-2 rounded-lg flex-1 mx-3 focus:outline-none uppercase font-bold hover:bg-blue-600" wire:click="$toggle('hideUnscheduled')"><i class="far {{$hideUnscheduled ? 'fa-check-square' : 'fa-square'}} mr-1"></i> Hide Unscheduled Events</button>
+            <button class="bg-blue-800 p-2 rounded-lg flex-1 mx-3 focus:outline-none uppercase font-bold hover:bg-blue-600" wire:click="$toggle('hideScheduled')"><i class="far {{$hideScheduled ? 'fa-check-square' : 'fa-square'}} mr-1"></i> Hide Scheduled Events</button>
+            <button class="bg-blue-800 p-2 rounded-lg flex-1 mx-3 focus:outline-none uppercase font-bold hover:bg-blue-600" wire:click="$toggle('hideCompleted')"><i class="far {{$hideCompleted ? 'fa-check-square' : 'fa-square'}} mr-1"></i> Hide Completed Events</button>
 
 {{--            <button class="bg-blue-800 p-2 rounded-lg flex-1 mx-3 focus:outline-none uppercase font-bold"><i class="far fa-check-square mr-1"></i> Hide Completed Events</button>--}}
 {{--            <button class="bg-blue-800 p-2 rounded-lg flex-1 mx-3 focus:outline-none uppercase font-bold"><i class="far fa-check-square mr-1"></i> Hide Scheduled Events</button>--}}
