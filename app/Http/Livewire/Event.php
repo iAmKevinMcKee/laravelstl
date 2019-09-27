@@ -14,9 +14,7 @@ class Event extends Component
     {
         $this->event = $event;
         $this->score = $this->event->event_votes->sum('value');
-        if (auth()->check()) {
-            $this->userVote = $this->currentUserVote();
-        }
+        $this->userVote = $this->currentUserVote();
     }
 
     public function render()
@@ -60,11 +58,15 @@ class Event extends Component
 
     protected function currentUserVote()
     {
-        $vote = $this->event->event_votes->where('user_id', auth()->user()->id);
+        if (auth()->check()) {
+            $vote = $this->event->event_votes->where('user_id', auth()->user()->id);
 
-        if ($vote->count() === 0) {
-            return null;
+            if ($vote->count() === 0) {
+                return null;
+            }
+            return $this->event->event_votes->where('user_id', auth()->user()->id)->first()->value;
         }
-        return $this->event->event_votes->where('user_id', auth()->user()->id)->first()->value;
+
+        return null;
     }
 }
