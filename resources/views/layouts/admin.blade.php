@@ -27,7 +27,7 @@
 
 </head>
 
-<body class="leading-normal tracking-normal bg-gray-200" style="font-family: 'Source Sans Pro', sans-serif;">
+<body class="leading-normal tracking-normal bg-gray-300" style="font-family: 'Source Sans Pro', sans-serif;">
 
 <!--Nav-->
 <nav id="header" class="fixed w-full z-30 top-0 bg-stl-blue text-white">

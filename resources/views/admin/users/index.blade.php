@@ -10,7 +10,7 @@
         <h2 class="text-2xl">Manage Users</h2>
 
         <div class="mt-8">
-            @livewire('users-table')
+            @livewire('users-table', $search = request()->query('search'))
         </div>
         
     </div>

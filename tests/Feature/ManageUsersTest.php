@@ -72,6 +72,5 @@ class ManageUsersTest extends TestCase
         $response->assertStatus(200);
 
         $response->assertViewIs('admin.users.index');
-        $response->assertViewHas('users');
     }
 }

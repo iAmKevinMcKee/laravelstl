@@ -1,37 +1,44 @@
 @if ($paginator->hasPages())
-    <div class="flex items-center">
+    <ul class="flex items-center" role="navigation">
+        {{-- Previous Page Link --}}
         @if ($paginator->onFirstPage())
-            <span class="rounded-l rounded-sm border px-3 py-2 cursor-not-allowed no-underline">&laquo;</span>
+            <li class="p-2 rounded border cursor-not-allowed mr-2" aria-disabled="true" aria-label="@lang('pagination.previous')">
+                <span class="" aria-hidden="true">&lsaquo;&lsaquo; Previous</span>
+            </li>
         @else
-            <a
-                class="rounded-l rounded-sm border-t border-b border-l px-3 py-2 text-brand-dark hover:bg-brand-light no-underline"
-                href="{{ $paginator->previousPageUrl() }}"
-                rel="prev"
-            >
-                &laquo;
-            </a>
+            <li class="">
+                <button type="button" class="p-2 rounded border hover:bg-blue-600 hover:text-white mr-2" wire:click="previousPage" rel="prev" aria-label="@lang('pagination.previous')">&lsaquo;&lsaquo; Previous</button>
+            </li>
         @endif
 
+        {{-- Pagination Elements --}}
         @foreach ($elements as $element)
+            {{-- "Three Dots" Separator --}}
             @if (is_string($element))
-                <span class="border-t border-b border-l px-3 py-2 cursor-not-allowed no-underline">{{ $element }}</span>
+                <li class="p-2 rounded border cursor-not-allowed mr-2" aria-disabled="true"><span class="">{{ $element }}</span></li>
             @endif
 
+            {{-- Array Of Links --}}
             @if (is_array($element))
                 @foreach ($element as $page => $url)
                     @if ($page == $paginator->currentPage())
-                        <span class="border-t border-b border-l px-3 py-2 bg-stl-blue text-white no-underline">{{ $page }}</span>
+                        <li class="p-2 rounded border bg-stl-blue text-white mr-2" aria-current="page"><span class="">{{ $page }}</span></li>
                     @else
-                        <a class="border-t border-b border-l px-3 py-2 hover:bg-brand-light text-brand-dark no-underline" href="{{ $url }}">{{ $page }}</a>
+                        <li class=""><button type="button" class="p-2 rounded border hover:bg-blue-600 hover:text-white mr-2" wire:click="gotoPage({{ $page }})">{{ $page }}</button></li>
                     @endif
                 @endforeach
             @endif
         @endforeach
 
+        {{-- Next Page Link --}}
         @if ($paginator->hasMorePages())
-            <a class="rounded-r rounded-sm border px-3 py-2 hover:bg-brand-light text-brand-dark no-underline" href="{{ $paginator->nextPageUrl() }}" rel="next">&raquo;</a>
+            <li class="">
+                <button type="button" class="p-2 rounded border hover:bg-blue-600 hover:text-white" wire:click="nextPage" rel="next" aria-label="@lang('pagination.next')">Next &rsaquo;&rsaquo;</button>
+            </li>
         @else
-            <span class="rounded-r rounded-sm border px-3 py-2 hover:bg-brand-light text-brand-dark no-underline cursor-not-allowed">&raquo;</span>
+            <li class="" aria-disabled="true" aria-label="@lang('pagination.next')">
+                <span class="p-2 rounded border disabled cursor-not-allowed" aria-hidden="true">Next &rsaquo;&rsaquo;</span>
+            </li>
         @endif
-    </div>
+    </ul>
 @endif
