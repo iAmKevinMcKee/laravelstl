@@ -1,0 +1,102 @@
+.navbar {
+  @apply fixed w-full z-30 top-0 text-white;
+
+  .nav-container {
+    @apply w-full mx-auto flex flex-wrap items-center justify-between mt-0 py-2;
+
+    .branding {
+      @apply pl-4 flex items-center;
+
+      a {
+        @apply text-white no-underline font-bold text-2xl;
+
+        &:hover {
+          @apply no-underline;
+        }
+      }
+    }
+  }
+
+  #nav-toggle {
+    @apply flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 appearance-none;
+
+    &:hover {
+      @apply text-gray-800 border-teal-500;
+    }
+  }
+
+  #nav-content {
+    @apply w-full flex-grow mt-2 bg-white text-black p-4 z-20;
+
+    ul {
+      @apply justify-end flex-1 items-center;
+
+      li {
+        @apply mb-6;
+
+        a {
+          @apply inline-block py-2 px-4 text-gray-800 font-bold;
+        }
+      }
+    }
+
+    #navAction {
+      @apply mx-auto bg-white text-gray-800 font-bold rounded-full mt-4 py-4 px-8 shadow opacity-75;
+
+      &:hover {
+        @apply underline;
+      }
+    }
+  }
+}
+
+@screen md {
+  .navbar #nav-content ul li a {
+    @apply text-gray-200;
+  }
+}
+
+@screen lg {
+  .navbar {
+    .nav-container .branding a {
+      @apply text-4xl;
+    }
+
+    #nav-content {
+      @apply flex items-center w-auto mt-0 bg-transparent p-0;
+
+      ul {
+        @apply flex;
+
+        li {
+          @apply mr-3 mb-0;
+        }
+      }
+
+      #navAction {
+        @apply mx-0 mt-0;
+      }
+    }
+  }
+}
+
+.navbar.scrolled {
+  @apply bg-white shadow;
+
+  .branding a {
+    @apply text-gray-800;
+  }
+
+  #nav-content {
+    @apply bg-white;
+
+    ul li a {
+      @apply text-gray-800;
+    }
+
+    #navAction {
+      background-color: transparent;
+      @apply text-white;
+    }
+  }
+}
