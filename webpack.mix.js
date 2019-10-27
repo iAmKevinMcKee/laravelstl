@@ -1,7 +1,7 @@
 const mix = require('laravel-mix');
 
 mix
-  .postCss('resources/css/app.css', 'public/css')
+  .less('resources/less/app.less', 'public/css')
   .js('resources/js/app.js', 'public/js')
   .options({
     postCss: [require('postcss-import'), require('tailwindcss')],
