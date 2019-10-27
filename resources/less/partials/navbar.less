@@ -50,12 +50,6 @@
   }
 }
 
-@screen md {
-  .navbar #nav-content ul li a {
-    @apply text-gray-200;
-  }
-}
-
 @screen lg {
   .navbar {
     .nav-container .branding a {
@@ -70,6 +64,10 @@
 
         li {
           @apply mr-3 mb-0;
+
+          a {
+            @apply text-gray-200;
+          }
         }
       }
 
