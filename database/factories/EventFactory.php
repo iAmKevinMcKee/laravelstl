@@ -11,7 +11,6 @@ $factory->define(Event::class, function (Faker $faker) {
         'date' => $faker->dateTimeThisMonth($min = 'now'),
         'speaker' => $faker->name,
         'video_url' => null,
-        'score' => 0,
         'created_by' => 1
     ];
 });
