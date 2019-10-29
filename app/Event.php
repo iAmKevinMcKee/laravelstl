@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
@@ -28,6 +29,11 @@ class Event extends Model
             return true;
         }
         return false;
+    }
+
+    public function createdBy()
+    {
+        return $this->belongsTo(User::class, 'created_by');
     }
 
     public function scopeCompleted($query)
