@@ -3,7 +3,6 @@
 namespace App\Http\Livewire;
 
 use App\Event;
-use Carbon\Carbon;
 use Livewire\Component;
 use Livewire\WithPagination;
 
