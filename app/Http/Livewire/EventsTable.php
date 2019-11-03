@@ -40,19 +40,17 @@ class EventsTable extends Component
 
     public function searchEvents()
     {
-        $regex = "/^\d\d?\/\d\d?\/\d\d\d\d\$|^\d\d\d\d-\d\d?-\d\d?\$/";
-        $carbon = '';
-        if (preg_match($regex, $this->search, $matches)) {
-            $carbon = Carbon::parse($this->search)->format('Y-m-d');
-        }
-
+        $search = $this->search;
         $this->events = Event::with('createdBy')
-            ->where('topic', 'like', '%' . $this->search . '%')
-            ->orWhere('speaker', 'like', '%' . $this->search . '%')
-            ->orWhere(function ($q) use ($carbon) {
-                $q->where('date',  'like', $carbon);
-            })
-            ->paginate(10);
+            ->where('topic', 'like', '%' . $search . '%')
+            ->orWhere('speaker', 'like', '%' . $search . '%')
+            ->orWhere('date',  'like', '%' . $search . '%')
+            ->orWhere('video_url',  'like', '%' . $search . '%')
+            ->orWhereHas('createdBy', function ($q) use ($search) {
+                $q->where(function ($q) use ($search) {
+                    $q->where('name', 'LIKE', '%' . $search . '%');
+                });
+            })->paginate(10);
 
         return $this->events;
     }
@@ -65,7 +63,9 @@ class EventsTable extends Component
 
     public function saveEvent()
     {
-        $this->eventBeingEdited->topic = $this->editedEvent['topic'];
+        foreach ($this->editedEvent as $key => $value) {
+            $this->eventBeingEdited[$key] = $this->editedEvent[$key];
+        }
         $this->eventBeingEdited->save();
         $this->stopEditing();
     }

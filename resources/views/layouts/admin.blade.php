@@ -66,11 +66,14 @@
 
     <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
 </nav>
-@yield('content')
-
-</body>
+<div id="app">
+    @yield('content')
+</div>
 
 @yield('javascript')
+    @livewireAssets
+</body>
+
 
 
 <script>
