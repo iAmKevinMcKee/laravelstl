@@ -22,7 +22,7 @@
                         </button>
                     </td>
                     <td class="px-4 py-2">{{$event->topic}}</td>
-                    <td class="px-4 py-2">{{$event->date->format('Y-m-d')}}</td>
+                    <td class="px-4 py-2">{{$event->date ? $event->date->format('Y-m-d') : 'Not Scheduled Yet'}}</td>
                     <td class="px-4 py-2">{{$event->speaker}}</td>
                     <td class="px-4 py-2">{{$event->video_url}}</td>
                     <td class="px-4 py-2">{{$event->createdBy->name}}</td>
