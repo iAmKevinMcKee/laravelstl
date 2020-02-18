@@ -11,6 +11,12 @@ Route::get('/events', [\App\Http\Controllers\EventsController::class, 'index'])-
 Route::get('/dashboard', 'DashboardController@index')->middleware('auth');
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::group(['middleware' => 'admin'], function () {
+    Route::get('/admin', 'AdminController@index')->middleware('admin')->name('admin.index');
+    Route::get('/admin/users', 'AdminUsersController@index');
+    Route::get('/admin/events', 'AdminEventsController@index');
+});
+
 Route::get('/test', function () {
     return view('nothere');
 });

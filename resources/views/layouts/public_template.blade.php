@@ -19,9 +19,7 @@
 
     @if(auth()->user())
     <script>
-        window.User = {
-            !!auth() - > user() - > toJson() !!
-        };
+        window.User = {!!auth()->user()->toJson() !!};
     </script>
     @endif
     <script src="{{ mix('js/app.js') }}" defer></script>

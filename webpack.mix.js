@@ -5,7 +5,7 @@ mix
   .js('resources/js/app.js', 'public/js')
   .options({
     postCss: [require('postcss-import'), require('tailwindcss')],
-  });
+  }).sourceMaps();
 
 if (mix.inProduction()) {
   mix

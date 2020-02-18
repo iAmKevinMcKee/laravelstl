@@ -28,23 +28,7 @@
         </div>
         <div class="w-full border-t-8 border-gray-400 mt-8 text-gray-800">
             @foreach($events as $event)
-                <div class="w-full flex flex-wrap border-b-2 border-gray-200 py-4">
-                    <div class="w-1/12 text-center text-2xl">
-                        @livewire('event', $event, key($event->id))
-                    </div>
-                    <div class="w-9/12 flex items-center text-4xl flex-col justify-center">
-                        <div class="w-full flex align-center">{{$event->topic}}</div>
-                        @if($event->scheduled || $event->completed)<div class="w-full text-xl text-stl-red">{{optional($event->date)->toFormattedDateString()}} - {{$event->speaker}}</div>@endif
-                    </div>
-                    @if($event->video_url)
-                    <div class="w-1/6 flex justify-center align-content-center">
-                        <a href="{{$event->video_url}}" target="_blank" class="hover:text-blue-600 text-blue-800 flex flex-col justify-center">
-                            <i class="fab fa-youtube self-center text-5xl"></i>
-                            <span class="text-sm self-center text-lg">Watch Video</span>
-                        </a>
-                    </div>
-                    @endif
-                </div>
+                @livewire('event', $event, key($event->id))
             @endforeach
         </div>
     </div>
