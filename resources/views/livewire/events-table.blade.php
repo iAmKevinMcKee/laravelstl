@@ -2,7 +2,7 @@
     <div class="bg-white rounded p-8 shadow-lg overflow-hidden">
         <div class="mb-4 flex">
             <input type="text" class="p-1 border rounded-l w-64" placeholder="Search Events ..."
-                wire:model="search" wire:keyup="searchEvents">
+                wire:model.debounce.250ms="search" wire:keyup="searchEvents">
         </div>
         <div class="overflow-x-scroll">
             <table class="table-auto w-full">
@@ -22,7 +22,7 @@
                         </button>
                     </td>
                     <td class="px-4 py-2">{{$event->topic}}</td>
-                    <td class="px-4 py-2">{{optional($event->date)->format('Y-m-d')}}</td>
+                    <td class="px-4 py-2">{{$event->date->format('Y-m-d')}}</td>
                     <td class="px-4 py-2">{{$event->speaker}}</td>
                     <td class="px-4 py-2">{{$event->video_url}}</td>
                     <td class="px-4 py-2">{{$event->createdBy->name}}</td>

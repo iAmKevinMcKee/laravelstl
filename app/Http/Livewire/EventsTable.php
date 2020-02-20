@@ -63,7 +63,8 @@ class EventsTable extends Component
     public function saveEvent()
     {
         foreach ($this->editedEvent as $key => $value) {
-            $this->eventBeingEdited[$key] = $this->editedEvent[$key];
+            $value = $value === "" ? NULL : $value;
+            $this->eventBeingEdited[$key] = $value;
         }
         $this->eventBeingEdited->save();
         $this->stopEditing();

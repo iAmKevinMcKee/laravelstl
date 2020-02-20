@@ -16,7 +16,7 @@
                 <div class="flex items-center mb-4 ">
                     <label for="email" class="mr-2 w-32 text-right font-bold">Date:</label>
                     <input type="date" class="p-2 border rounded w-full truncate" wire:model="editedEvent.date"
-                        value="{{optional($eventBeingEdited->date)->format('Y-m-d')}}">
+                        value="{{$eventBeingEdited->date ? $eventBeingEdited->date->format('Y-m-d'): ''}}">
                 </div>
                 <div class="flex items-center mb-4">
                     <label for="role" class="mr-2 w-32 text-right font-bold">Speaker:</label>
