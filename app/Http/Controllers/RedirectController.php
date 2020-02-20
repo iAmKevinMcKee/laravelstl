@@ -15,4 +15,9 @@ class RedirectController extends Controller
     {
         return redirect('https://www.meetup.com/Laravel-STL/');
     }
+
+    public function youtube()
+    {
+        return redirect('https://www.youtube.com/channel/UCaAX3ces9BVtbD6XQlB3BCQ/');
+    }
 }

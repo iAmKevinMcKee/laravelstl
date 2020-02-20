@@ -69,8 +69,11 @@
 
             <div class="hidden" id="nav-content">
                 <ul class="list-reset">
-                    <li>
+                    <!-- <li>
                         <a class="nav-links {{request()->segment(1) == 'events' ? 'underline' : 'no-underline'}}" href="{{route('events.index')}}">Events</a>
+                    </li> -->
+                    <li>
+                        <a class="nav-links no-underline" href="{{route('youtube-redirect')}}" target="_blank">Youtube Channel</a>
                     </li>
                     <li>
                         <a class="nav-links no-underline" href="{{route('slack-redirect')}}" target="_blank">Slack Channel</a>
